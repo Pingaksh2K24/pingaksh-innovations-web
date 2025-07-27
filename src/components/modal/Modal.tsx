@@ -54,7 +54,7 @@ export default function Modal({ isOpen, onClose, title, message, details = [], i
           
           {details.length > 0 && (
             <div className="modal-details">
-              <h3 className="details-title">What's Coming Soon:</h3>
+              <h3 className="details-title">What&apos;s Coming Soon:</h3>
               <ul className="details-list">
                 {details.map((detail, index) => (
                   <li key={index} className="detail-item">

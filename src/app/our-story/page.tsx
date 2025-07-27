@@ -25,23 +25,23 @@ export default function OurStory() {
             
             <div className="story-section">
               <p className="story-text">
-                From our roots in grassroots research to our expansion into strategic digital services, we've continuously evolved to stay ahead of the curve. What started as a small team of dreamers is now a growing force of developers, creators, strategists, and change-makers united by a single purpose:
+                From our roots in grassroots research to our expansion into strategic digital services, we&apos;ve continuously evolved to stay ahead of the curve. What started as a small team of dreamers is now a growing force of developers, creators, strategists, and change-makers united by a single purpose:
               </p>
               <div className="purpose-highlight">
-                <p className="purpose-text">To empower India's next generation of thinkers, leaders, and builders.</p>
+                <p className="purpose-text">To empower India&apos;s next generation of thinkers, leaders, and builders.</p>
               </div>
             </div>
             
             <div className="story-section">
               <p className="story-text">
-                Whether it's developing advanced AI tools, crafting digital campaigns, or innovating in the political-tech space, Pingaksh Innovation stands for bold ideas, real execution, and national progress.
+                Whether it&apos;s developing advanced AI tools, crafting digital campaigns, or innovating in the political-tech space, Pingaksh Innovation stands for bold ideas, real execution, and national progress.
               </p>
             </div>
             
             <div className="story-section mission-section">
               <div className="mission-highlight">
-                <p className="mission-text">We're not just building services.</p>
-                <p className="mission-text-bold">We're building the future.</p>
+                <p className="mission-text">We&apos;re not just building services.</p>
+                <p className="mission-text-bold">We&apos;re building the future.</p>
               </div>
             </div>
           </div>

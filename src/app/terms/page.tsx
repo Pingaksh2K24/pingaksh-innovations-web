@@ -150,7 +150,7 @@ export default function TermsOfService() {
             <h2>14. Changes to Terms</h2>
             <p>
               We reserve the right to modify these terms at any time. We will notify users of any 
-              material changes by posting the new terms on this page and updating the "Last updated" date.
+              material changes by posting the new terms on this page and updating the &quot;Last updated&quot; date.
             </p>
           </section>
 

@@ -68,7 +68,7 @@ export default function CookiePolicy() {
             <ul>
               <li>Browser settings: Most browsers allow you to block or delete cookies</li>
               <li>Browser extensions: Install extensions to manage cookie preferences</li>
-              <li>Device settings: Manage cookies through your device's privacy settings</li>
+              <li>Device settings: Manage cookies through your device&apos;s privacy settings</li>
               <li>Third-party opt-outs: Use tools provided by advertising networks</li>
             </ul>
           </section>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import './Header.css'
 import Image from 'next/image'
 
@@ -45,7 +46,7 @@ export default function Header() {
 
       {/* Navigation */}
       <nav className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
-        <a href="/" className="nav-link" onClick={closeMenu}>Home</a>
+        <Link href="/" className="nav-link" onClick={closeMenu}>Home</Link>
         <a href="#about" className="nav-link" onClick={closeMenu}>About</a>
         <a href="#services" className="nav-link" onClick={closeMenu}>Services</a>
         <a href="/contact" className="nav-link" onClick={closeMenu}>Contact</a>

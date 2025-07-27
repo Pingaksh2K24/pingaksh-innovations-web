@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
           <section className="legal-section">
             <h2>1. Introduction</h2>
             <p>
-              Pingaksh Innovations ("we," "our," or "us") is committed to protecting your privacy. 
+              Pingaksh Innovations (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information 
               when you visit our website or use our services.
             </p>
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
             <ul>
               <li>Right to access and receive a copy of your data</li>
               <li>Right to rectify inaccurate information</li>
-              <li>Right to erasure ("right to be forgotten")</li>
+              <li>Right to erasure (&quot;right to be forgotten&quot;)</li>
               <li>Right to restrict processing</li>
               <li>Right to data portability</li>
               <li>Right to object to processing</li>
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="legal-section">
-            <h2>9. Children's Privacy</h2>
+            <h2>9. Children&apos;s Privacy</h2>
             <p>
               Our services are not intended for children under 13 years of age. We do not knowingly 
               collect personal information from children under 13. If you believe we have collected 
@@ -130,7 +130,7 @@ export default function PrivacyPolicy() {
             <h2>11. Changes to This Privacy Policy</h2>
             <p>
               We may update this Privacy Policy from time to time. We will notify you of any changes 
-              by posting the new Privacy Policy on this page and updating the "Last updated" date.
+              by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
             </p>
           </section>
 
