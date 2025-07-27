@@ -1,0 +1,561 @@
+/* Footer Styles - Comprehensive Design */
+.footer {
+  background: #08122F;
+  padding: 3rem 4rem 1rem 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Moving Stars for Footer Section */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Moving Star 1 */
+    radial-gradient(3px 3px at 30% 45%, #60A5FA, transparent),
+    /* Moving Star 3 */
+    radial-gradient(3px 3px at 80% 35%, #60A5FA, transparent),
+    /* Moving Star 6 */
+    radial-gradient(2px 2px at 90% 75%, #FEF3C7, transparent),
+    /* Moving Star 7 */
+    radial-gradient(2px 2px at 20% 85%, #FFFFFF, transparent),
+    /* Moving Star 8 */
+    radial-gradient(3px 3px at 75% 10%, #60A5FA, transparent),
+    /* Moving Star 9 */
+    radial-gradient(2px 2px at 10% 55%, #FFFFFF, transparent),
+    /* Moving Star 10 */
+    radial-gradient(3px 3px at 50% 90%, #60A5FA, transparent),
+    /* Moving Star 12 */
+    radial-gradient(3px 3px at 25% 70%, #FFFFFF, transparent),
+    /* Moving Star 13 */
+    radial-gradient(2px 2px at 70% 30%, #60A5FA, transparent),
+    /* Moving Star 14 */
+    radial-gradient(3px 3px at 35% 15%, #60A5FA, transparent);
+  background-repeat: no-repeat;
+  animation: footerMovingStars 25s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes footerMovingStars {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-15px) translateX(8px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-30px) translateX(-3px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-45px) translateX(12px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-60px) translateX(0px);
+    opacity: 0.3;
+  }
+}
+
+/* Blowing Stars Effect for Footer */
+.footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Blowing Star 1 */
+    radial-gradient(1px 1px at 25% 30%, #FFFFFF, transparent),
+    /* Blowing Star 2 */
+    radial-gradient(2px 2px at 40% 50%, #60A5FA, transparent),
+    /* Blowing Star 3 */
+    radial-gradient(2px 2px at 70% 70%, #FFFFFF, transparent),
+    /* Blowing Star 5 */
+    radial-gradient(1px 1px at 85% 40%, #60A5FA, transparent),
+    /* Blowing Star 6 */
+    radial-gradient(1px 1px at 15% 90%, #FFFFFF, transparent),
+    /* Blowing Star 8 */
+    radial-gradient(2px 2px at 60% 5%, #60A5FA, transparent),
+    /* Blowing Star 9 */
+    radial-gradient(2px 2px at 45% 15%, #FFFFFF, transparent),
+    /* Blowing Star 11 */
+    radial-gradient(1px 1px at 80% 85%, #60A5FA, transparent),
+    /* Blowing Star 12 */
+    radial-gradient(2px 2px at 65% 45%, #60A5FA, transparent),
+    /* Blowing Star 15 */
+    radial-gradient(2px 2px at 75% 95%, #FFFFFF, transparent);
+  background-repeat: no-repeat;
+  animation: footerBlowingStars 18s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes footerBlowingStars {
+  0% {
+    transform: translateX(0px) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateX(25px) scale(1.1);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translateX(-15px) scale(0.9);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Comet Animation for Footer */
+.comet-container {
+  position: absolute;
+  top: 5%;
+  left: -100px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.comet {
+  width: 150px;
+  height: 75px;
+  animation: cometMove 8s linear infinite;
+}
+
+@keyframes cometMove {
+  0% {
+    transform: translateX(-100px) translateY(-100px) scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(20vw) translateY(-80px) scale(1) rotate(45deg);
+  }
+  35% {
+    transform: translateX(40vw) translateY(-40px) scale(1.3) rotate(90deg);
+  }
+  50% {
+    transform: translateX(60vw) translateY(0px) scale(1.5) rotate(135deg);
+  }
+  65% {
+    transform: translateX(80vw) translateY(40px) scale(1.3) rotate(180deg);
+  }
+  80% {
+    transform: translateX(90vw) translateY(60px) scale(1) rotate(225deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(100px) scale(0.8) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Comet Core Animation */
+.comet-core {
+  animation: cometCorePulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes cometCorePulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Comet Tail Animation */
+.comet-tail {
+  animation: cometTailFlow 2s ease-in-out infinite;
+}
+
+.comet-tail-secondary {
+  animation: cometTailFlow 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes cometTailFlow {
+  0% {
+    opacity: 0.6;
+    stroke-width: 12;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 14;
+  }
+  100% {
+    opacity: 0.6;
+    stroke-width: 12;
+  }
+}
+
+/* Comet Glow Animation */
+.comet-glow {
+  animation: cometGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes cometGlow {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+/* Comet Sparkles Animation */
+.comet-sparkle-1 {
+  animation: cometSparkle 1.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.comet-sparkle-2 {
+  animation: cometSparkle 1.5s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.comet-sparkle-3 {
+  animation: cometSparkle 1.5s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.comet-sparkle-4 {
+  animation: cometSparkle 1.5s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+
+.comet-sparkle-5 {
+  animation: cometSparkle 1.5s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+@keyframes cometSparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* Alien Spaceship Animation for Footer */
+.alien-spaceship-container {
+  position: absolute;
+  top: 15%;
+  left: -150px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.alien-spaceship {
+  width: 180px;
+  height: 108px;
+  animation: alienSpaceshipMove 10s linear infinite;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.3));
+}
+
+/* Ship Thrust Glow Effect */
+.alien-spaceship-container::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 40px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.1) 70%, transparent 100%);
+  animation: thrustGlow 2s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes thrustGlow {
+  0% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@keyframes alienSpaceshipMove {
+  0% {
+    transform: translateX(-150px) translateY(0px) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(25vw) translateY(-10px) scale(1);
+  }
+  50% {
+    transform: translateX(50vw) translateY(0px) scale(1.2);
+  }
+  75% {
+    transform: translateX(75vw) translateY(10px) scale(1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px)) translateY(0px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Company Info Section */
+.footer-company {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+  border-radius: 8px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.1);
+  width: 80px;
+  height: 80px;
+}
+
+.footer-company-text {
+  flex: 1;
+}
+
+.footer-company-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-company-tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Quick Links Section */
+.footer-links {
+  display: flex;
+  gap: 3rem;
+  flex: 2;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section-title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.025em;
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+}
+
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer-legal-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-legal-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-legal-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: width 0.3s ease;
+}
+
+.footer-legal-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-company {
+    max-width: 100%;
+  }
+  
+  .footer-links {
+    width: 100%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  
+  .footer-container {
+    gap: 1.5rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-copyright,
+  .footer-legal-link,
+  .footer-link {
+    font-size: 0.8rem;
+  }
+  
+  .footer-company-name {
+    font-size: 1.25rem;
+  }
+  
+  .footer-company-tagline {
+    font-size: 0.875rem;
+  }
+  
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+} 

@@ -1,0 +1,9 @@
+// Export all components from this file
+export { default as Header } from './header/Header'
+export { default as HeroSection } from './HeroSection'
+export { default as AboutSection } from './AboutSection'
+export { default as ServicesSection } from './ServicesSection'
+export { default as PortfolioSection } from './PortfolioSection'
+export { default as IndustriesSection } from './IndustriesSection'
+export { default as ContactSection } from './ContactSection'
+export { default as Footer } from './footer/Footer' 

@@ -1,0 +1,1394 @@
+/* Custom CSS for PINGAKSH INNOVATIONS - Exact Design Match */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0a0f1c 0%, #1a2332 50%, #0a0f1c 100%);
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cosmic Background with Stars */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Small stars */
+    radial-gradient(1px 1px at 25px 35px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 45px 75px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 95px 45px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 135px 85px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 165px 35px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 185px 65px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 205px 25px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 225px 55px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 245px 85px, #FFFFFF, transparent),
+    radial-gradient(1px 1px at 265px 15px, #FFFFFF, transparent),
+    
+    /* Medium stars */
+    radial-gradient(2px 2px at 35px 55px, #FFFFFF, transparent),
+    radial-gradient(2px 2px at 75px 25px, #FFFFFF, transparent),
+    radial-gradient(2px 2px at 115px 95px, #FFFFFF, transparent),
+    radial-gradient(2px 2px at 155px 45px, #FFFFFF, transparent),
+    radial-gradient(2px 2px at 195px 75px, #FFFFFF, transparent),
+    radial-gradient(2px 2px at 235px 35px, #FFFFFF, transparent),
+    radial-gradient(2px 2px at 275px 65px, #FFFFFF, transparent),
+    
+    /* Large stars */
+    radial-gradient(3px 3px at 55px 85px, #FFFFFF, transparent),
+    radial-gradient(3px 3px at 95px 15px, #FFFFFF, transparent),
+    radial-gradient(3px 3px at 135px 55px, #FFFFFF, transparent),
+    radial-gradient(3px 3px at 175px 95px, #FFFFFF, transparent),
+    radial-gradient(3px 3px at 215px 25px, #FFFFFF, transparent),
+    radial-gradient(3px 3px at 255px 65px, #FFFFFF, transparent),
+    
+    /* Blue stars for variety */
+    radial-gradient(1px 1px at 15px 65px, #60A5FA, transparent),
+    radial-gradient(1px 1px at 55px 95px, #60A5FA, transparent),
+    radial-gradient(1px 1px at 95px 35px, #60A5FA, transparent),
+    radial-gradient(1px 1px at 135px 75px, #60A5FA, transparent),
+    radial-gradient(1px 1px at 175px 15px, #60A5FA, transparent),
+    radial-gradient(1px 1px at 215px 55px, #60A5FA, transparent),
+    radial-gradient(1px 1px at 255px 95px, #60A5FA, transparent),
+    
+    /* Bright stars */
+    radial-gradient(2px 2px at 45px 15px, #FEF3C7, transparent),
+    radial-gradient(2px 2px at 85px 55px, #FEF3C7, transparent),
+    radial-gradient(2px 2px at 125px 95px, #FEF3C7, transparent),
+    radial-gradient(2px 2px at 165px 35px, #FEF3C7, transparent),
+    radial-gradient(2px 2px at 205px 75px, #FEF3C7, transparent),
+    radial-gradient(2px 2px at 245px 15px, #FEF3C7, transparent);
+  background-repeat: repeat;
+  background-size: 300px 100px;
+  animation: sparkle 40s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-100px); }
+}
+
+/* Header styles moved to src/components/header/Header.css */
+
+/* Hero Section - Add top margin for fixed header */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  min-height: 85vh;
+  position: relative;
+  margin-top: 4.5rem; /* Reduced margin for smaller header */
+  background: #08122F;
+  overflow: hidden;
+}
+
+/* Moving and Blowing Stars for Hero Section */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Moving Star 1 */
+    radial-gradient(2px 2px at 10% 20%, #FFFFFF, transparent),
+    /* Moving Star 2 */
+    radial-gradient(3px 3px at 25% 40%, #60A5FA, transparent),
+    /* Moving Star 3 */
+    radial-gradient(2px 2px at 40% 15%, #FEF3C7, transparent),
+    /* Moving Star 4 */
+    radial-gradient(2px 2px at 60% 60%, #FFFFFF, transparent),
+    /* Moving Star 5 */
+    radial-gradient(3px 3px at 75% 30%, #60A5FA, transparent),
+    /* Moving Star 6 */
+    radial-gradient(2px 2px at 85% 70%, #FEF3C7, transparent),
+    /* Moving Star 7 */
+    radial-gradient(2px 2px at 15% 80%, #FFFFFF, transparent),
+    /* Moving Star 8 */
+    radial-gradient(3px 3px at 90% 10%, #60A5FA, transparent),
+    /* Moving Star 9 */
+    radial-gradient(2px 2px at 5% 50%, #FFFFFF, transparent),
+    /* Moving Star 10 */
+    radial-gradient(3px 3px at 45% 85%, #60A5FA, transparent),
+    /* Moving Star 11 */
+    radial-gradient(2px 2px at 70% 5%, #FEF3C7, transparent),
+    /* Moving Star 12 */
+    radial-gradient(3px 3px at 95% 45%, #FFFFFF, transparent),
+    /* Moving Star 13 */
+    radial-gradient(2px 2px at 30% 65%, #60A5FA, transparent),
+    /* Moving Star 14 */
+    radial-gradient(3px 3px at 55% 25%, #FEF3C7, transparent),
+    /* Moving Star 15 */
+    radial-gradient(2px 2px at 80% 85%, #FFFFFF, transparent),
+    /* Moving Star 16 */
+    radial-gradient(3px 3px at 20% 35%, #60A5FA, transparent);
+  background-repeat: no-repeat;
+  animation: movingStars 20s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes movingStars {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-5px);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-60px) translateX(15px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-80px) translateX(0px);
+    opacity: 0.3;
+  }
+}
+
+/* Blowing Stars Effect */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    /* Blowing Star 1 */
+    radial-gradient(1px 1px at 20% 25%, #FFFFFF, transparent),
+    /* Blowing Star 2 */
+    radial-gradient(2px 2px at 35% 45%, #60A5FA, transparent),
+    /* Blowing Star 3 */
+    radial-gradient(1px 1px at 50% 20%, #FEF3C7, transparent),
+    /* Blowing Star 4 */
+    radial-gradient(2px 2px at 65% 65%, #FFFFFF, transparent),
+    /* Blowing Star 5 */
+    radial-gradient(1px 1px at 80% 35%, #60A5FA, transparent),
+    /* Blowing Star 6 */
+    radial-gradient(2px 2px at 95% 75%, #FEF3C7, transparent),
+    /* Blowing Star 7 */
+    radial-gradient(1px 1px at 30% 85%, #FFFFFF, transparent),
+    /* Blowing Star 8 */
+    radial-gradient(2px 2px at 70% 5%, #60A5FA, transparent),
+    /* Blowing Star 9 */
+    radial-gradient(1px 1px at 10% 60%, #FEF3C7, transparent),
+    /* Blowing Star 10 */
+    radial-gradient(2px 2px at 40% 10%, #FFFFFF, transparent),
+    /* Blowing Star 11 */
+    radial-gradient(1px 1px at 75% 80%, #60A5FA, transparent),
+    /* Blowing Star 12 */
+    radial-gradient(2px 2px at 90% 30%, #FEF3C7, transparent),
+    /* Blowing Star 13 */
+    radial-gradient(1px 1px at 25% 70%, #FFFFFF, transparent),
+    /* Blowing Star 14 */
+    radial-gradient(2px 2px at 60% 40%, #60A5FA, transparent),
+    /* Blowing Star 15 */
+    radial-gradient(1px 1px at 85% 15%, #FEF3C7, transparent),
+    /* Blowing Star 16 */
+    radial-gradient(2px 2px at 15% 90%, #FFFFFF, transparent);
+  background-repeat: no-repeat;
+  animation: blowingStars 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes blowingStars {
+  0% {
+    transform: translateX(0px) scale(1);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translateX(30px) scale(1.2);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translateX(-20px) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+    opacity: 0.4;
+  }
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.hero-title-large {
+  font-size: 5rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #F97316, #EA580C);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(249, 115, 22, 0.4);
+}
+
+.brain-circuit {
+  margin-top: 4rem;
+  width: 120px;
+  height: 120px;
+}
+
+.brain-circuit svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero Image Container */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 20px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Rocket Launch Animation */
+.rocket-container {
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.rocket {
+  animation: rocketLaunch 6s linear infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes rocketLaunch {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1400px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Flame Animations */
+.main-flame {
+  animation: mainFlameFlicker 0.15s ease-in-out infinite alternate;
+}
+
+.flame-core {
+  animation: coreFlameFlicker 0.1s ease-in-out infinite alternate;
+}
+
+@keyframes mainFlameFlicker {
+  0% {
+    opacity: 0.9;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1.1);
+  }
+}
+
+@keyframes coreFlameFlicker {
+  0% {
+    opacity: 0.8;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1.3);
+  }
+}
+
+/* Smoke Trail Animations */
+.smoke-1 {
+  animation: smokeRise 3s ease-out infinite;
+  animation-delay: 0s;
+}
+
+.smoke-2 {
+  animation: smokeRise 3s ease-out infinite;
+  animation-delay: 0.5s;
+}
+
+.smoke-3 {
+  animation: smokeRise 3s ease-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes smokeRise {
+  0% {
+    opacity: 0.6;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(-30px) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(2);
+  }
+}
+
+/* Satellite Animation */
+.satellite-container {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.satellite {
+  animation: satelliteOrbit 12s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes satelliteOrbit {
+  0% {
+    transform: rotate(0deg) translateX(0px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0px) rotate(-360deg);
+  }
+}
+
+/* Signal Beam Animation */
+.signal-beam {
+  animation: beamPulse 1.5s ease-out infinite;
+}
+
+@keyframes beamPulse {
+  0% {
+    opacity: 0.8;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.2);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scaleX(1);
+  }
+}
+
+/* Navigation Lights Animation */
+.nav-light-1 {
+  animation: navLightBlink 2s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.nav-light-2 {
+  animation: navLightBlink 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.nav-light-3 {
+  animation: navLightBlink 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.nav-light-4 {
+  animation: navLightBlink 2s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes navLightBlink {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Signal Wave Animations */
+.signal-wave-1 {
+  animation: signalPulse 3s ease-out infinite;
+  animation-delay: 0s;
+}
+
+.signal-wave-2 {
+  animation: signalPulse 3s ease-out infinite;
+  animation-delay: 1s;
+}
+
+.signal-wave-3 {
+  animation: signalPulse 3s ease-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes signalPulse {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+
+
+/* Launch Platform */
+.launch-platform {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.platform-base {
+  width: 40px;
+  height: 6px;
+  background: linear-gradient(90deg, #374151, #6B7280);
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.platform-tower {
+  position: absolute;
+  bottom: 6px;
+  width: 3px;
+  height: 15px;
+  background: #6B7280;
+  border-radius: 1px;
+}
+
+.platform-tower:first-of-type {
+  left: 8px;
+}
+
+.platform-tower:last-of-type {
+  right: 8px;
+}
+
+/* About Section */
+.about-section {
+  padding: 5rem 4rem;
+  background: #000522;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.about-description {
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0.9;
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+/* About Content Styles */
+.about-content {
+  max-width: 1000px;
+}
+
+.about-section-block {
+  margin-bottom: 4rem;
+}
+
+.about-subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Mission & Vision Grid */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.mission-card,
+.vision-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Different Points */
+.different-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.point-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.point-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.point-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.point-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.feature-card {
+  background: #08122F;
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background: #0a1a3a;
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Services and Contact Layout */
+.bottom-sections {
+  display: flex;
+  padding: 4rem;
+  gap: 4rem;
+  background: #000522;
+}
+
+.services-section {
+  flex: 1;
+  background: #000522;
+}
+
+.contact-section {
+  flex: 1;
+  background: #000522;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.space-graphic {
+  width: 14rem;
+  height: 14rem;
+}
+
+.contact-title {
+  text-align: right;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+/* Footer styles moved to src/components/footer/Footer.css */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-title-large {
+    font-size: 3.5rem;
+  }
+  
+  .bottom-sections {
+    flex-direction: column;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem;
+    margin-top: 3.5rem; /* Reduced margin for mobile */
+  }
+  
+  .about-section {
+    padding: 3rem 2rem;
+  }
+  
+  .bottom-sections {
+    padding: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-title-large {
+    font-size: 3rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .different-points {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .mission-card,
+  .vision-card,
+  .point-item {
+    padding: 1.5rem;
+  }
+  
+  .portfolio-section {
+    padding: 3rem 2rem;
+  }
+  
+  .portfolio-title {
+    font-size: 2.5rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 1rem;
+  }
+  
+  .portfolio-image-container {
+    height: 200px;
+  }
+  
+  .portfolio-content {
+    padding: 1rem;
+  }
+  
+  .portfolio-item-title {
+    font-size: 1.25rem;
+  }
+  
+  .portfolio-item-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Portfolio Section Styles */
+.portfolio-section {
+  padding: 5rem 4rem;
+  background: #000522;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-header {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.portfolio-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.portfolio-description {
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.portfolio-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.portfolio-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3B82F6, #10B981, #F59E0B, #EF4444);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover::before {
+  transform: scaleX(1);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+.portfolio-content {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-item-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.025em;
+}
+
+.portfolio-item-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.feature-tag {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60A5FA;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+  background: rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Services Section Styles */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services-header {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.services-header .section-description {
+  text-align: left;
+  margin: 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3B82F6, #10B981, #F59E0B, #EF4444);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.service-image-container {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  aspect-ratio: 1;
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.05);
+}
+
+.service-content {
+  position: relative;
+  z-index: 1;
+}
+
+.service-title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.025em;
+}
+
+.service-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-features li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #3B82F6;
+  font-weight: bold;
+}
+
+/* Responsive Design for Services */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .service-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 0 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .service-card {
+    padding: 1rem;
+  }
+  
+  .service-title {
+    font-size: 1.25rem;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+  }
+  
+  .service-features li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Industries Section */
+.industries-section {
+  background: #000522;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.industries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.industries-header {
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.industries-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.industries-description {
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0.9;
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.industry-item {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.industry-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3B82F6, #10B981, #F59E0B, #EF4444);
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.industry-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.industry-item:hover::before {
+  transform: scaleX(1);
+}
+
+.industry-item:hover::after {
+  opacity: 1;
+}
+
+.industry-item:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.4);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+}
+
+.industry-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.industry-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #60A5FA, #A78BFA, #F472B6);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.industry-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.industry-item:hover .industry-icon {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 15px 35px rgba(96, 165, 250, 0.4), 0 0 20px rgba(167, 139, 250, 0.3);
+}
+
+.industry-item:hover .industry-icon::before {
+  left: 100%;
+}
+
+.industry-icon svg {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.industry-content {
+  text-align: center;
+}
+
+.industry-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFFFFF, #E2E8F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+}
+
+.industry-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+/* Responsive styles for Industries section */
+@media (max-width: 1024px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .industry-item {
+    padding: 1.5rem;
+  }
+  
+  .industries-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-section {
+    padding: 3rem 0;
+  }
+  
+  .industries-container {
+    padding: 0 1rem;
+  }
+  
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .industry-item {
+    padding: 1.5rem;
+  }
+  
+  .industries-title {
+    font-size: 1.75rem;
+  }
+  
+  .industry-title {
+    font-size: 1.25rem;
+  }
+  
+  .industry-description {
+    font-size: 0.9rem;
+  }
+}

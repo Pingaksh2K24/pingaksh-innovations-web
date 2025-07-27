@@ -1,0 +1,105 @@
+/* Header Styles - Fixed/Static with reduced height */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #08122F;
+  backdrop-filter: blur(10px);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3B82F6, #60A5FA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.logo-inner {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #93C5FD;
+}
+
+.logo-image {
+  border-radius: 8px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.1);
+  width: 45px;
+  height: 45px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #60A5FA;
+}
+
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 2rem;
+  }
+  
+  .nav-menu {
+    gap: 2rem;
+  }
+  
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .logo-main {
+    font-size: 1.375rem;
+  }
+  
+  .logo-sub {
+    font-size: 0.7rem;
+  }
+} 
