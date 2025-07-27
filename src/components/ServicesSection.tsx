@@ -9,7 +9,7 @@ export default function ServicesSection() {
         <div className="services-header">
           <h2 className="section-title">Our Services</h2>
           <p className="section-description">
-            We are a technology company at the forefront of AI, robotics, machine learning, IoT, and space exploration, committed to pushing the boundaries of what's possible in the digital age.
+            We are a technology company at the forefront of AI, robotics, machine learning, IoT, and space exploration, committed to pushing the boundaries of what&apos;s possible in the digital age.
           </p>
         </div>
         

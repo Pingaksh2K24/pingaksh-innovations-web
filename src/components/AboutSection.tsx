@@ -48,7 +48,7 @@ export default function AboutSection() {
               <div className="point-item">
                 <h4 className="point-title">Innovation-Driven</h4>
                 <p className="point-text">
-                  We don't just follow trends; we create them. Our team of experts constantly pushes the boundaries of what's possible, developing breakthrough technologies that set new industry standards.
+                  We don&apos;t just follow trends; we create them. Our team of experts constantly pushes the boundaries of what&apos;s possible, developing breakthrough technologies that set new industry standards.
                 </p>
               </div>
               <div className="point-item">
@@ -60,7 +60,7 @@ export default function AboutSection() {
               <div className="point-item">
                 <h4 className="point-title">Real-World Impact</h4>
                 <p className="point-text">
-                  Every innovation we create is designed to solve real problems and make a tangible difference in people's lives. We focus on practical applications that deliver measurable results and positive change.
+                  Every innovation we create is designed to solve real problems and make a tangible difference in people&apos;s lives. We focus on practical applications that deliver measurable results and positive change.
                 </p>
               </div>
             </div>

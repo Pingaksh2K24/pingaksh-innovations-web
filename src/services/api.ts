@@ -1,4 +1,4 @@
-import { ApiResponse } from '@/types'
+import { ApiResponse, User } from '@/types'
 
 // Base API configuration
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api'
@@ -45,13 +45,13 @@ class ApiClient {
   }
 
   // GET request
-  async get<T>(endpoint: string, params?: Record<string, any>): Promise<ApiResponse<T>> {
-    const queryString = params ? `?${new URLSearchParams(params).toString()}` : ''
+  async get<T>(endpoint: string, params?: Record<string, string | number | boolean>): Promise<ApiResponse<T>> {
+    const queryString = params ? `?${new URLSearchParams(params as Record<string, string>).toString()}` : ''
     return this.request<T>(`${endpoint}${queryString}`)
   }
 
   // POST request
-  async post<T>(endpoint: string, data?: any): Promise<ApiResponse<T>> {
+  async post<T>(endpoint: string, data?: unknown): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
@@ -59,7 +59,7 @@ class ApiClient {
   }
 
   // PUT request
-  async put<T>(endpoint: string, data?: any): Promise<ApiResponse<T>> {
+  async put<T>(endpoint: string, data?: unknown): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
@@ -79,11 +79,11 @@ export const apiClient = new ApiClient(API_BASE_URL)
 
 // Specific API services
 export const userService = {
-  getUsers: () => apiClient.get('/users'),
-  getUser: (id: string) => apiClient.get(`/users/${id}`),
-  createUser: (data: any) => apiClient.post('/users', data),
-  updateUser: (id: string, data: any) => apiClient.put(`/users/${id}`, data),
-  deleteUser: (id: string) => apiClient.delete(`/users/${id}`),
+  getUsers: () => apiClient.get<User[]>('/users'),
+  getUser: (id: string) => apiClient.get<User>(`/users/${id}`),
+  createUser: (data: Omit<User, 'id'>) => apiClient.post<User>('/users', data),
+  updateUser: (id: string, data: Partial<User>) => apiClient.put<User>(`/users/${id}`, data),
+  deleteUser: (id: string) => apiClient.delete<void>(`/users/${id}`),
 }
 
 // Add more services as needed 
