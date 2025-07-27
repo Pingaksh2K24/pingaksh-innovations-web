@@ -134,7 +134,7 @@ export default function Contact() {
                   <textarea 
                     id="message" 
                     name="message" 
-                    rows="6"
+                    rows={6}
                     placeholder="Tell us about your project or inquiry..."
                     required
                   ></textarea>
