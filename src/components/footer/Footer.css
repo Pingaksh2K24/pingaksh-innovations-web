@@ -558,4 +558,68 @@
     width: 60px;
     height: 60px;
   }
+
+  .alien-spaceship {
+    width: 120px;
+    height: 72px;
+  }
+
+  .alien-spaceship-container::after {
+    width: 80px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  
+  .footer-container {
+    gap: 1rem;
+  }
+  
+  .footer-links {
+    gap: 1rem;
+  }
+  
+  .footer-section-title {
+    font-size: 1rem;
+  }
+  
+  .footer-link {
+    font-size: 0.75rem;
+  }
+  
+  .footer-company-name {
+    font-size: 1.125rem;
+  }
+  
+  .footer-company-tagline {
+    font-size: 0.8rem;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer-copyright,
+  .footer-legal-link {
+    font-size: 0.75rem;
+  }
+  
+  .footer-legal {
+    gap: 0.75rem;
+  }
+
+  .alien-spaceship {
+    width: 100px;
+    height: 60px;
+  }
+
+  .alien-spaceship-container::after {
+    width: 60px;
+    height: 25px;
+  }
 } 
