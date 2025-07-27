@@ -45,11 +45,10 @@ export default function Header() {
 
       {/* Navigation */}
       <nav className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
+        <a href="/" className="nav-link" onClick={closeMenu}>Home</a>
         <a href="#about" className="nav-link" onClick={closeMenu}>About</a>
         <a href="#services" className="nav-link" onClick={closeMenu}>Services</a>
-        <a href="#portfolio" className="nav-link" onClick={closeMenu}>Portfolio</a>
-        <a href="#industries" className="nav-link" onClick={closeMenu}>Industries</a>
-        <a href="#contact" className="nav-link" onClick={closeMenu}>Contact</a>
+        <a href="/contact" className="nav-link" onClick={closeMenu}>Contact</a>
       </nav>
 
       {/* Mobile Menu Overlay */}

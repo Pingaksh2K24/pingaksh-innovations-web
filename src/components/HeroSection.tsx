@@ -1,8 +1,19 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
+import Modal from './modal/Modal'
 
 export default function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleGetStarted = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
   return (
     <section className="hero-section">
       {/* Left side - Text content */}
@@ -16,7 +27,7 @@ export default function HeroSection() {
           At Pingaksh Innovation, we blend intelligence with imagination to build cutting-edge technologies that shape a smarter and interstellar tomorrow.
         </p>
 
-        <button className="cta-button">
+        <button className="cta-button" onClick={handleGetStarted}>
           Get Started
         </button>
       </div>
@@ -191,6 +202,23 @@ export default function HeroSection() {
         
 
       </div>
+
+      {/* Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title="Service Coming Soon!"
+        message="We're excited to announce that our comprehensive AI & Robotics services will be launching soon. Our team is working hard to bring you cutting-edge solutions."
+        icon="🚀"
+        details={[
+          "Advanced AI-powered robotics solutions for industrial automation",
+          "Custom machine learning models for predictive analytics",
+          "IoT integration services for smart city infrastructure",
+          "Space research and satellite technology development",
+          "24/7 technical support and consultation services",
+          "Training programs for AI and robotics implementation"
+        ]}
+      />
     </section>
   )
 } 

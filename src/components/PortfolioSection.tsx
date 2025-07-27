@@ -7,9 +7,9 @@ export default function PortfolioSection() {
     <section id="portfolio" className="portfolio-section">
       <div className="portfolio-container">
         {/* Header */}
-        <div className="portfolio-header">
-          <h2 className="portfolio-title">Portfolio</h2>
-          <p className="portfolio-description">
+        <div className="about-header">
+          <h2 className="about-title">Portfolio</h2>
+          <p className="about-description">
             Explore our innovative projects, prototypes, and research collaborations that showcase our expertise in cutting-edge technology solutions.
           </p>
         </div>

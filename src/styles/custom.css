@@ -733,7 +733,7 @@ body::before {
 }
 
 .contact-section {
-  flex: 1;
+  flex: 1;  
   background: #000522;
 }
 
@@ -778,7 +778,7 @@ body::before {
   .hero-section {
     flex-direction: column;
     text-align: center;
-    gap: 3rem;
+    gap: 1.5rem;
     padding: 3rem 2rem;
   }
   
@@ -791,8 +791,10 @@ body::before {
   }
   
   .hero-image {
-    width: 400px;
-    height: 400px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   
   .rocket-container {
@@ -873,8 +875,10 @@ body::before {
   }
   
   .hero-image {
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   
   .rocket-container {
@@ -1051,8 +1055,10 @@ body::before {
   }
   
   .hero-image {
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   
   .rocket {
@@ -1478,29 +1484,26 @@ body::before {
   padding: 0 2rem;
 }
 
-.portfolio-header {
-  text-align: center;
+/* Use AboutSection header styles for PortfolioSection header */
+.portfolio-section .about-header {
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.portfolio-section .about-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.portfolio-section .about-description {
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0.9;
+  max-width: 800px;
+  line-height: 1.6;
   margin-bottom: 3rem;
-}
-
-.portfolio-title {
-  font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #FFFFFF, #60A5FA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
-}
-
-.portfolio-description {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
-  max-width: 600px;
-  margin: 0 auto;
-  font-weight: 400;
 }
 
 .portfolio-grid {

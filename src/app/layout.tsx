@@ -13,8 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PINGAKSH INNOVATIONS - AI & Robotics",
+  title: "Pingaksh Innovations - AI & Robotics",
   description: "Advancing technologies in machine learning, IOT, and space research. We are a technology company at the forefront of AI, robotics, machine learning, IoT, and space exploration.",
+  manifest: '/manifest.json',
+  icons: {
+    icon: [
+      {
+        url: '/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+      {
+        url: '/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      }
+    ],
+    apple: [
+      {
+        url: '/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      }
+    ],
+    shortcut: '/favicon-32x32.png',
+  },
 };
 
 export default function RootLayout({

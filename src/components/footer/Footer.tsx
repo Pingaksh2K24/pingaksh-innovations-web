@@ -54,10 +54,10 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-section-title">About</h4>
             <ul className="footer-link-list">
-              <li><a href="#about" className="footer-link">Our Story</a></li>
-              <li><a href="#team" className="footer-link">Team</a></li>
-              <li><a href="#mission" className="footer-link">Mission</a></li>
-              <li><a href="#vision" className="footer-link">Vision</a></li>
+              <li><a href="/our-story" className="footer-link">Our Story</a></li>
+              <li><a href="/team" className="footer-link">Team</a></li>
+              <li><a href="#about" className="footer-link">Mission</a></li>
+              <li><a href="#about" className="footer-link">Vision</a></li>
             </ul>
           </div>
 
@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="footer-link-list">
               <li><a href="mailto:pingakshinnovations24@gmail.com" className="footer-link">pingakshinnovations24@gmail.com</a></li>
               <li><a href="tel:+919834828054" className="footer-link">+91-9834828054</a></li>
-              <li><a href="#location" className="footer-link">Location</a></li>
+              <li className="footer-link">Near Government Polytechnic, Vithhal Nagar Khamgaon, District Buldhana, Maharashtra, 443404</li>
             </ul>
           </div>
         </div>

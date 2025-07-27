@@ -1,0 +1,285 @@
+/* Our Story Page Styling */
+.our-story-page {
+  min-height: 100vh;
+  background: #000522;
+  color: white;
+}
+
+.our-story-main {
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px); /* Account for header and footer */
+}
+
+.our-story-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.our-story-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.our-story-title {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #60A5FA, #3B82F6, #1D4ED8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.our-story-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #60A5FA, #3B82F6);
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+}
+
+.our-story-divider::before,
+.our-story-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: #60A5FA;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.our-story-divider::before {
+  left: -20px;
+}
+
+.our-story-divider::after {
+  right: -20px;
+}
+
+.our-story-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+}
+
+.story-section {
+  margin-bottom: 2.5rem;
+}
+
+.story-section:last-child {
+  margin-bottom: 0;
+}
+
+.story-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #E2E8F0;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.purpose-highlight {
+  background: rgba(96, 165, 250, 0.1);
+  border-left: 4px solid #60A5FA;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 12px 12px 0;
+  position: relative;
+}
+
+.purpose-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(59, 130, 246, 0.05));
+  border-radius: 0 12px 12px 0;
+  z-index: -1;
+}
+
+.purpose-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #60A5FA;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+.mission-section {
+  margin-top: 3rem;
+}
+
+.mission-highlight {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(59, 130, 246, 0.1));
+  border: 2px solid rgba(96, 165, 250, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-highlight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: -1;
+}
+
+.mission-text {
+  font-size: 1.4rem;
+  color: #E2E8F0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.mission-text-bold {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #60A5FA;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover Effects */
+.story-section:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.purpose-highlight:hover {
+  background: rgba(96, 165, 250, 0.15);
+  transition: background 0.3s ease;
+}
+
+.mission-highlight:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .our-story-container {
+    padding: 0 1rem;
+  }
+  
+  .our-story-title {
+    font-size: 2.2rem;
+  }
+  
+  .our-story-content {
+    padding: 1.5rem 1.5rem;
+  }
+  
+  .story-text {
+    font-size: 1.1rem;
+  }
+  
+  .purpose-text {
+    font-size: 1.2rem;
+  }
+  
+  .mission-text {
+    font-size: 1.2rem;
+  }
+  
+  .mission-text-bold {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-story-main {
+    padding: 0.5rem 0;
+  }
+  
+  .our-story-title {
+    font-size: 1.8rem;
+  }
+  
+  .our-story-content {
+    padding: 1rem 1rem;
+  }
+  
+  .story-text {
+    font-size: 1rem;
+  }
+  
+  .purpose-highlight {
+    padding: 1rem;
+  }
+  
+  .purpose-text {
+    font-size: 1.1rem;
+  }
+  
+  .mission-highlight {
+    padding: 1.5rem;
+  }
+  
+  .mission-text {
+    font-size: 1.1rem;
+  }
+  
+  .mission-text-bold {
+    font-size: 1.4rem;
+  }
+}
+
+/* Scrollbar Styling */
+.our-story-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.our-story-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.our-story-content::-webkit-scrollbar-thumb {
+  background: rgba(96, 165, 250, 0.5);
+  border-radius: 4px;
+}
+
+.our-story-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(96, 165, 250, 0.7);
+} 
