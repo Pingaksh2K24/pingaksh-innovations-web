@@ -1,7 +1,7 @@
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
 import Link from 'next/link'
-import './ai-machine-learning.css'
+import '@/app/services/ai-machine-learning/ai-machine-learning.css'
 
 export default function AIMachineLearningPage() {
   return (
