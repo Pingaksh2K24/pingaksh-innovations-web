@@ -2,6 +2,7 @@
 
 import './Footer.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -64,10 +65,10 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-section-title">Services</h4>
             <ul className="footer-link-list">
-              <li><a href="#ai" className="footer-link">AI & Machine Learning</a></li>
-              <li><a href="#robotics" className="footer-link">Robotics</a></li>
-              <li><a href="#iot" className="footer-link">IoT Solutions</a></li>
-              <li><a href="#space" className="footer-link">Space Research</a></li>
+              <li><Link href="/services/ai-machine-learning" className="footer-link">AI & Machine Learning</Link></li>
+              <li><Link href="/services/robotics" className="footer-link">Robotics</Link></li>
+              <li><Link href="/services/iot-solutions" className="footer-link">IoT Solutions</Link></li>
+              <li><Link href="/services/space-research" className="footer-link">Space Research</Link></li>
             </ul>
           </div>
 
@@ -86,7 +87,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <div className="footer-copyright">
-            © 2025 Pingaksh Innovations. All rights reserved.
+            © {new Date().getFullYear()} Pingaksh Innovations. All rights reserved.
           </div>
 
           <div className="footer-legal">

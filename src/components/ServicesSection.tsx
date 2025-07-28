@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function ServicesSection() {
   return (
@@ -30,6 +31,9 @@ export default function ServicesSection() {
               <p className="service-description">
                 Advanced artificial intelligence and machine learning solutions that transform businesses through intelligent automation, predictive analytics, and cognitive computing.
               </p>
+              <Link href="/services/ai-machine-learning" className="read-more-btn">
+                Read More
+              </Link>
             </div>
           </div>
 
@@ -49,6 +53,9 @@ export default function ServicesSection() {
               <p className="service-description">
                 Cutting-edge robotics solutions for industrial automation, autonomous systems, and intelligent machines that enhance productivity and safety.
               </p>
+              <Link href="/services/robotics" className="read-more-btn">
+                Read More
+              </Link>
             </div>
           </div>
 
@@ -68,6 +75,9 @@ export default function ServicesSection() {
               <p className="service-description">
                 Comprehensive Internet of Things solutions that connect devices, collect data, and enable smart decision-making across various industries.
               </p>
+              <Link href="/services/iot-solutions" className="read-more-btn">
+                Read More
+              </Link>
             </div>
           </div>
 
@@ -87,6 +97,9 @@ export default function ServicesSection() {
               <p className="service-description">
                 Innovative space technology research and development, including satellite systems, space exploration tools, and aerospace engineering solutions.
               </p>
+              <Link href="/services/space-research" className="read-more-btn">
+                Read More
+              </Link>
             </div>
           </div>
         </div>

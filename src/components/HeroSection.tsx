@@ -1,11 +1,15 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Modal from './modal/Modal'
 
 export default function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [cometTrail, setCometTrail] = useState<Array<{ id: number; x: number; y: number; timestamp: number }>>([])
+  const heroRef = useRef<HTMLElement>(null)
+  const cometIdRef = useRef(0)
 
   const handleGetStarted = () => {
     setIsModalOpen(true)
@@ -14,8 +18,60 @@ export default function HeroSection() {
   const closeModal = () => {
     setIsModalOpen(false)
   }
+
+  // Handle mouse movement to create comet trail
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!heroRef.current) return
+
+    const rect = heroRef.current.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+
+    setMousePosition({ x, y })
+
+    // Create new comet particle every 50ms for smoother trail
+    const now = Date.now()
+    if (now - (cometTrail[cometTrail.length - 1]?.timestamp || 0) > 50) {
+      const newParticle = {
+        id: cometIdRef.current++,
+        x,
+        y,
+        timestamp: now
+      }
+      setCometTrail(prev => [...prev.slice(-15), newParticle]) // Keep last 15 particles for longer trail
+    }
+  }
+
+  // Clean up old comet particles
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = Date.now()
+      setCometTrail(prev => prev.filter(particle => now - particle.timestamp < 2000)) // Remove particles older than 2 seconds
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <section className="hero-section">
+    <section 
+      ref={heroRef}
+      className="hero-section" 
+      onMouseMove={handleMouseMove}
+    >
+      {/* Comet trail particles */}
+      {cometTrail.map((particle, index) => (
+        <div
+          key={particle.id}
+          className="comet-particle"
+          style={{
+            left: particle.x,
+            top: particle.y,
+            opacity: 1 - (index / cometTrail.length), // Fade out older particles
+            transform: `scale(${1 - (index / cometTrail.length) * 0.5})` // Scale down older particles
+          }}
+        />
+      ))}
+
       {/* Left side - Text content */}
       <div className="hero-content">
         <h1 className="hero-title">
