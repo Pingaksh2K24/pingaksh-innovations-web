@@ -1,13 +1,10 @@
 'use client'
 
 import '../contact.css'
-import Header from '../../components/header/Header'
-import Footer from '../../components/footer/Footer'
 
 export default function Contact() {
   return (
     <div className="contact-page">
-      <Header />
       
       <main className="contact-main">
         <div className="contact-container">
@@ -149,8 +146,6 @@ export default function Contact() {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   )
 } 

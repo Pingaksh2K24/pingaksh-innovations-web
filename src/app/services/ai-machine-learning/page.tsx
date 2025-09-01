@@ -1,12 +1,9 @@
-import Header from '@/components/header/Header'
-import Footer from '@/components/footer/Footer'
 import Link from 'next/link'
 import '@/app/services/ai-machine-learning/ai-machine-learning.css'
 
 export default function AIMachineLearningPage() {
   return (
     <>
-      <Header />
       <main className="service-detail-page">
         <div className="service-detail-container">
           <div className="service-detail-header">
@@ -107,7 +104,6 @@ export default function AIMachineLearningPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 } 

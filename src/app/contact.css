@@ -44,7 +44,7 @@
 .contact-title {
   font-size: 3.5rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #60A5FA, #3B82F6, #1D4ED8);
+  background: linear-gradient(135deg, #FF4500, #DC2626, #B91C1C);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,7 +57,7 @@
 .contact-divider {
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #60A5FA, #3B82F6);
+  background: linear-gradient(90deg, #FF4500, #DC2626);
   margin: 0 auto 1.5rem auto;
   border-radius: 2px;
   position: relative;
@@ -70,7 +70,7 @@
   top: 50%;
   width: 8px;
   height: 8px;
-  background: #60A5FA;
+  background: #FF4500;
   border-radius: 50%;
   transform: translateY(-50%);
 }
@@ -96,7 +96,7 @@
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #60A5FA;
+  color: #FF4500;
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -131,7 +131,7 @@
 .contact-card:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
+  box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
 }
 
 .contact-icon {
@@ -142,7 +142,7 @@
 .contact-card h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #60A5FA;
+  color: #FF4500;
   margin-bottom: 0.5rem;
 }
 
@@ -155,20 +155,20 @@
 
 .contact-link {
   display: inline-block;
-  background: rgba(96, 165, 250, 0.1);
-  color: #60A5FA;
+  background: rgba(255, 69, 0, 0.1);
+  color: #FF4500;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  border: 1px solid rgba(96, 165, 250, 0.3);
+  border: 1px solid rgba(255, 69, 0, 0.3);
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .contact-link:hover {
-  background: rgba(96, 165, 250, 0.2);
+  background: rgba(255, 69, 0, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 69, 0, 0.2);
 }
 
 
@@ -209,14 +209,14 @@
 .hours-item:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
+  box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
 }
 
 .hours-item .day {
   display: block;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #60A5FA;
+  color: #FF4500;
   margin-bottom: 0.5rem;
 }
 
@@ -262,7 +262,7 @@
   display: block;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #60A5FA;
+  color: #FF4500;
   margin-bottom: 0.5rem;
 }
 
@@ -283,9 +283,9 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #60A5FA;
+  border-color: #FF4500;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+  box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.1);
 }
 
 .form-group input::placeholder,
@@ -299,7 +299,7 @@
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  background: linear-gradient(135deg, #FF4500, #DC2626);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -313,7 +313,7 @@
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 69, 0, 0.3);
 }
 
 /* Gradient Animation */
@@ -427,10 +427,10 @@
 }
 
 .contact-content::-webkit-scrollbar-thumb {
-  background: rgba(96, 165, 250, 0.5);
+  background: rgba(255, 69, 0, 0.5);
   border-radius: 4px;
 }
 
 .contact-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(96, 165, 250, 0.7);
+  background: rgba(255, 69, 0, 0.7);
 } 

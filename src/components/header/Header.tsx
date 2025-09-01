@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import './Header.css'
 import Image from 'next/image'
@@ -15,6 +15,27 @@ export default function Header() {
   const closeMenu = () => {
     setIsMenuOpen(false)
   }
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeMenu()
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'hidden' // Prevent background scroll
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMenuOpen])
 
   return (
     <header className="header">
@@ -33,23 +54,52 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Hamburger Menu Button */}
+      {/* Desktop Navigation */}
+      <nav className="desktop-nav">
+        <Link href="/" className="nav-link">Home</Link>
+        <a href="#about" className="nav-link">About</a>
+        <a href="#services" className="nav-link">Services</a>
+        <a href="/contact" className="nav-link">Contact</a>
+      </nav>
+
+      {/* Menu Toggle Button */}
       <button 
-        className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`}
+        className={`menu-toggle ${isMenuOpen ? 'hidden' : ''}`}
         onClick={toggleMenu}
-        aria-label="Toggle navigation menu"
+        aria-label="Open navigation menu"
       >
         <span className="hamburger-line"></span>
         <span className="hamburger-line"></span>
         <span className="hamburger-line"></span>
       </button>
 
-      {/* Navigation */}
-      <nav className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
-        <Link href="/" className="nav-link" onClick={closeMenu}>Home</Link>
-        <a href="#about" className="nav-link" onClick={closeMenu}>About</a>
-        <a href="#services" className="nav-link" onClick={closeMenu}>Services</a>
-        <a href="/contact" className="nav-link" onClick={closeMenu}>Contact</a>
+      {/* Mobile Navigation */}
+      <nav className={`mobile-nav ${isMenuOpen ? 'mobile-nav-open' : ''}`}>
+        {/* Close button inside mobile menu */}
+        <button className="mobile-close-btn" onClick={closeMenu} aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        
+        <div className="mobile-nav-content">
+          <Link href="/" className="mobile-nav-link" onClick={closeMenu}>
+            <span className="nav-icon">🏠</span>
+            Home
+          </Link>
+          <a href="#about" className="mobile-nav-link" onClick={closeMenu}>
+            <span className="nav-icon">ℹ️</span>
+            About
+          </a>
+          <a href="#services" className="mobile-nav-link" onClick={closeMenu}>
+            <span className="nav-icon">⚙️</span>
+            Services
+          </a>
+          <a href="/contact" className="mobile-nav-link" onClick={closeMenu}>
+            <span className="nav-icon">📞</span>
+            Contact
+          </a>
+        </div>
       </nav>
 
       {/* Mobile Menu Overlay */}

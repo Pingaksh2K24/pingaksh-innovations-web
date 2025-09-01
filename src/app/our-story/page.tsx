@@ -1,19 +1,17 @@
 'use client'
 
 import '../our-story.css'
-import Header from '../../components/header/Header'
-import Footer from '../../components/footer/Footer'
 
 export default function OurStory() {
   return (
     <div className="our-story-page">
-      <Header />
       
       <main className="our-story-main">
         <div className="our-story-container">
           <div className="our-story-header">
             <h1 className="our-story-title">Our Story – Pingaksh Innovation</h1>
-            <div className="our-story-divider"></div>
+            <div className="our-story-divider"></div>Our Services
+
           </div>
           
           <div className="our-story-content">
@@ -47,8 +45,6 @@ export default function OurStory() {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   )
 } 

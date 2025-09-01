@@ -4,67 +4,94 @@ export default function AboutSection() {
   return (
     <section id="about" className="about-section">
       <div className="about-container">
-        {/* Heading and Description */}
+        {/* Enhanced Header */}
         <div className="about-header">
-          <h2 className="about-title">About Us</h2>
+          <h2 className="about-title">
+            Pioneering the Future of <span className="orange-text">Technology</span>
+          </h2>
           <p className="about-description">
-            We are a technology company at the forefront of AI, robotics, machine learning, IoT, and space exploration, committed to pushing the boundaries.
+            We are a technology company at the forefront of AI, robotics, machine learning, IoT, and space exploration, committed to pushing the boundaries of innovation and creating solutions that transform industries.
           </p>
         </div>
 
-        {/* About Content */}
+        {/* Enhanced About Content */}
         <div className="about-content">
-          {/* Brief Intro */}
-          <div className="about-section-block">
-            <h3 className="about-subtitle">Brief Intro of Pingaksh Innovation</h3>
-            <p className="about-text">
-              Pingaksh Innovation is a cutting-edge technology company founded with a vision to revolutionize the digital landscape through innovative solutions. We specialize in artificial intelligence, robotics, machine learning, IoT, and space exploration technologies, creating solutions that bridge the gap between imagination and reality.
-            </p>
+          {/* Stats Section */}
+          <div className="about-stats">
+            <div className="stat-card">
+              <div className="stat-number">5+</div>
+              <div className="stat-label">Years Experience</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Projects Completed</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">4</div>
+              <div className="stat-label">Core Technologies</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">100%</div>
+              <div className="stat-label">Client Satisfaction</div>
+            </div>
           </div>
 
-          {/* Mission & Vision */}
+          {/* Mission & Vision Enhanced */}
           <div className="about-section-block">
-            <h3 className="about-subtitle">Mission & Vision</h3>
+            <h3 className="about-subtitle">
+              <span className="subtitle-icon">🎯</span>
+              Mission & Vision
+            </h3>
             <div className="mission-vision-grid">
-              <div className="mission-card">
+              <div className="mission-card enhanced-card">
+                <div className="card-icon">🚀</div>
                 <h4 className="card-title">Our Mission</h4>
                 <p className="card-text">
-                  To develop and deploy cutting-edge technologies that solve real-world challenges, enhance human capabilities, and create sustainable solutions for the future. We strive to make advanced technology accessible and beneficial for all.
+                  To develop and deploy cutting-edge technologies that solve real-world challenges, enhance human capabilities, and create sustainable solutions for the future.
                 </p>
               </div>
-              <div className="vision-card">
+              <div className="vision-card enhanced-card">
+                <div className="card-icon">🌟</div>
                 <h4 className="card-title">Our Vision</h4>
                 <p className="card-text">
-                  To be the global leader in innovative technology solutions, pioneering breakthroughs in AI, robotics, and space exploration that transform industries and improve lives worldwide.
+                  To be the global leader in innovative technology solutions, pioneering breakthroughs in AI, robotics, and space exploration that transform industries worldwide.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Our Edge in Innovation */}
+          {/* Enhanced Innovation Points */}
           <div className="about-section-block">
-            <h3 className="about-subtitle">Our Edge in Innovation</h3>
+            <h3 className="about-subtitle">
+              <span className="subtitle-icon">⚡</span>
+              What Makes Us Different
+            </h3>
             <div className="different-points">
-              <div className="point-item">
+              <div className="point-item enhanced-point">
+                <div className="point-icon">💡</div>
                 <h4 className="point-title">Innovation-Driven</h4>
                 <p className="point-text">
-                  We don&apos;t just follow trends; we create them. Our team of experts constantly pushes the boundaries of what&apos;s possible, developing breakthrough technologies that set new industry standards.
+                  We don&apos;t just follow trends; we create them. Our team constantly pushes boundaries, developing breakthrough technologies that set new industry standards.
                 </p>
               </div>
-              <div className="point-item">
+              <div className="point-item enhanced-point">
+                <div className="point-icon">🔮</div>
                 <h4 className="point-title">Futuristic Approach</h4>
                 <p className="point-text">
-                  We think decades ahead, designing solutions that anticipate future needs and challenges. Our forward-thinking approach ensures our technologies remain relevant and impactful for years to come.
+                  We think decades ahead, designing solutions that anticipate future needs. Our forward-thinking approach ensures lasting relevance and impact.
                 </p>
               </div>
-              <div className="point-item">
+              <div className="point-item enhanced-point">
+                <div className="point-icon">🌍</div>
                 <h4 className="point-title">Real-World Impact</h4>
                 <p className="point-text">
-                  Every innovation we create is designed to solve real problems and make a tangible difference in people&apos;s lives. We focus on practical applications that deliver measurable results and positive change.
+                  Every innovation solves real problems and makes tangible differences. We focus on practical applications that deliver measurable results.
                 </p>
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </section>

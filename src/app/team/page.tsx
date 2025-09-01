@@ -1,13 +1,10 @@
 'use client'
 
 import '../team.css'
-import Header from '../../components/header/Header'
-import Footer from '../../components/footer/Footer'
 
 export default function Team() {
   return (
     <div className="team-page">
-      <Header />
       
       <main className="team-main">
         <div className="team-container">
@@ -90,8 +87,6 @@ export default function Team() {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   )
 } 

@@ -1,9 +1,8 @@
-import { Header, HeroSection, AboutSection, ServicesSection, PortfolioSection, IndustriesSection, ContactSection, Footer } from '@/components'
+import { HeroSection, AboutSection, ServicesSection, PortfolioSection, IndustriesSection, ContactSection } from '@/components'
 
 export default function Home() {
   return (
     <main>
-      <Header />
       <HeroSection />
       <AboutSection />
       <ServicesSection />
@@ -12,7 +11,6 @@ export default function Home() {
       <div className="bottom-sections">
         {/* <ContactSection /> */}
       </div>
-      <Footer />
     </main>
   )
 }

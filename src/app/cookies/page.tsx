@@ -1,12 +1,10 @@
 'use client'
 
 import '../legal.css'
-import LegalNav from '../../components/LegalNav'
 
 export default function CookiePolicy() {
   return (
     <div className="legal-page">
-      <LegalNav />
       <div className="legal-container">
         <h1 className="legal-title">Cookie Policy</h1>
         <p className="legal-date">Last updated: January 2025</p>

@@ -1,12 +1,9 @@
-import Header from '@/components/header/Header'
-import Footer from '@/components/footer/Footer'
 import Link from 'next/link'
 import '@/app/services/robotics/robotics.css'
 
 export default function RoboticsPage() {
   return (
     <>
-      <Header />
       <main className="service-detail-page">
         <div className="service-detail-container">
           <div className="service-detail-header">
@@ -107,7 +104,6 @@ export default function RoboticsPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 } 

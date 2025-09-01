@@ -1,12 +1,9 @@
-import Header from '@/components/header/Header'
-import Footer from '@/components/footer/Footer'
 import Link from 'next/link'
 import '@/app/services/iot-solutions/iot-solutions.css'
 
 export default function IoTSolutionsPage() {
   return (
     <>
-      <Header />
       <main className="service-detail-page">
         <div className="service-detail-container">
           <div className="service-detail-header">
@@ -107,7 +104,6 @@ export default function IoTSolutionsPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 } 
