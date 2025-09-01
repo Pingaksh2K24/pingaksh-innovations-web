@@ -137,6 +137,10 @@
 .contact-icon {
   font-size: 2rem;
   margin-bottom: 0.8rem;
+  color: #FF4500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-card h3 {

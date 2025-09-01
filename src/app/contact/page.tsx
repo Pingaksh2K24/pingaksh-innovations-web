@@ -1,6 +1,7 @@
 'use client'
 
 import '../contact.css'
+import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md'
 
 export default function Contact() {
   return (
@@ -25,7 +26,7 @@ export default function Contact() {
               <div className="contact-info-section">
                 <div className="contact-cards">
                   <div className="contact-card">
-                    <div className="contact-icon">📧</div>
+                    <div className="contact-icon"><MdEmail /></div>
                     <h3>Email</h3>
                     <p>pingakshinnovations24@gmail.com</p>
                     <a href="mailto:pingakshinnovations24@gmail.com" className="contact-link">
@@ -34,7 +35,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="contact-card">
-                    <div className="contact-icon">📞</div>
+                    <div className="contact-icon"><MdPhone /></div>
                     <h3>Phone</h3>
                     <p>+91-9834828054</p>
                     <a href="tel:+919834828054" className="contact-link">
@@ -43,7 +44,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="contact-card">
-                    <div className="contact-icon">📍</div>
+                    <div className="contact-icon"><MdLocationOn /></div>
                     <h3>Address</h3>
                     <p>Near Government Polytechnic, Vithhal Nagar Khamgaon, District Buldhana, Maharashtra, 443404</p>
                     <a href="https://maps.google.com/?q=Government+Polytechnic+Khamgaon+Buldhana+Maharashtra" 

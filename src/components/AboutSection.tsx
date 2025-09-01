@@ -1,5 +1,7 @@
 'use client'
 
+import { MdGpsFixed, MdRocket, MdStar, MdLightbulb, MdAutoAwesome, MdPublic } from 'react-icons/md'
+
 export default function AboutSection() {
   return (
     <section id="about" className="about-section">
@@ -39,19 +41,19 @@ export default function AboutSection() {
           {/* Mission & Vision Enhanced */}
           <div className="about-section-block">
             <h3 className="about-subtitle">
-              <span className="subtitle-icon">🎯</span>
+              <span className="subtitle-icon"><MdGpsFixed /></span>
               Mission & Vision
             </h3>
             <div className="mission-vision-grid">
               <div className="mission-card enhanced-card">
-                <div className="card-icon">🚀</div>
+                <div className="card-icon"><MdRocket /></div>
                 <h4 className="card-title">Our Mission</h4>
                 <p className="card-text">
                   To develop and deploy cutting-edge technologies that solve real-world challenges, enhance human capabilities, and create sustainable solutions for the future.
                 </p>
               </div>
               <div className="vision-card enhanced-card">
-                <div className="card-icon">🌟</div>
+                <div className="card-icon"><MdStar /></div>
                 <h4 className="card-title">Our Vision</h4>
                 <p className="card-text">
                   To be the global leader in innovative technology solutions, pioneering breakthroughs in AI, robotics, and space exploration that transform industries worldwide.
@@ -63,26 +65,26 @@ export default function AboutSection() {
           {/* Enhanced Innovation Points */}
           <div className="about-section-block">
             <h3 className="about-subtitle">
-              <span className="subtitle-icon">⚡</span>
+              <span className="subtitle-icon"><MdAutoAwesome /></span>
               What Makes Us Different
             </h3>
             <div className="different-points">
               <div className="point-item enhanced-point">
-                <div className="point-icon">💡</div>
+                <div className="point-icon"><MdLightbulb /></div>
                 <h4 className="point-title">Innovation-Driven</h4>
                 <p className="point-text">
                   We don&apos;t just follow trends; we create them. Our team constantly pushes boundaries, developing breakthrough technologies that set new industry standards.
                 </p>
               </div>
               <div className="point-item enhanced-point">
-                <div className="point-icon">🔮</div>
+                <div className="point-icon"><MdAutoAwesome /></div>
                 <h4 className="point-title">Futuristic Approach</h4>
                 <p className="point-text">
                   We think decades ahead, designing solutions that anticipate future needs. Our forward-thinking approach ensures lasting relevance and impact.
                 </p>
               </div>
               <div className="point-item enhanced-point">
-                <div className="point-icon">🌍</div>
+                <div className="point-icon"><MdPublic /></div>
                 <h4 className="point-title">Real-World Impact</h4>
                 <p className="point-text">
                   Every innovation solves real problems and makes tangible differences. We focus on practical applications that deliver measurable results.

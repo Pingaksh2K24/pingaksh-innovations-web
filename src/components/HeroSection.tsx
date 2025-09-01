@@ -8,8 +8,13 @@ export default function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [cometTrail, setCometTrail] = useState<Array<{ id: number; x: number; y: number; timestamp: number }>>([])
+  const [isMounted, setIsMounted] = useState(false)
   const heroRef = useRef<HTMLElement>(null)
   const cometIdRef = useRef(0)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   const handleGetStarted = () => {
     setIsModalOpen(true)
@@ -21,7 +26,7 @@ export default function HeroSection() {
 
   // Handle mouse movement to create comet trail
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!heroRef.current) return
+    if (!heroRef.current || !isMounted) return
 
     const rect = heroRef.current.getBoundingClientRect()
     const x = e.clientX - rect.left
@@ -29,48 +34,58 @@ export default function HeroSection() {
 
     setMousePosition({ x, y })
 
-    // Create new comet particle every 50ms for smoother trail
+    // Create new comet particle every 30ms for smoother trail
     const now = Date.now()
-    if (now - (cometTrail[cometTrail.length - 1]?.timestamp || 0) > 50) {
+    if (now - (cometTrail[cometTrail.length - 1]?.timestamp || 0) > 30) {
       const newParticle = {
         id: cometIdRef.current++,
         x,
         y,
         timestamp: now
       }
-      setCometTrail(prev => [...prev.slice(-15), newParticle]) // Keep last 15 particles for longer trail
+      setCometTrail(prev => [...prev.slice(-25), newParticle]) // Keep last 25 particles for longer trail
     }
   }
 
   // Clean up old comet particles
   useEffect(() => {
+    if (!isMounted) return
+    
     const interval = setInterval(() => {
       const now = Date.now()
-      setCometTrail(prev => prev.filter(particle => now - particle.timestamp < 2000)) // Remove particles older than 2 seconds
-    }, 100)
+      setCometTrail(prev => prev.filter(particle => now - particle.timestamp < 1500)) // Remove particles older than 1.5 seconds
+    }, 50)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [isMounted])
 
   return (
     <section 
       ref={heroRef}
       className="hero-section" 
       onMouseMove={handleMouseMove}
+      style={{ cursor: isMounted ? 'none' : 'default' }}
     >
       {/* Comet trail particles */}
-      {cometTrail.map((particle, index) => (
-        <div
-          key={particle.id}
-          className="comet-particle"
-          style={{
-            left: particle.x,
-            top: particle.y,
-            opacity: 1 - (index / cometTrail.length), // Fade out older particles
-            transform: `scale(${1 - (index / cometTrail.length) * 0.5})` // Scale down older particles
-          }}
-        />
-      ))}
+      {isMounted && cometTrail.map((particle, index) => {
+        const age = (Date.now() - particle.timestamp) / 1500 // Age as percentage of lifetime
+        const opacity = Math.max(0, 1 - age)
+        const scale = Math.max(0.3, 1 - age * 0.7)
+        
+        return (
+          <div
+            key={particle.id}
+            className="comet-particle"
+            style={{
+              left: particle.x - 4, // Center the particle
+              top: particle.y - 4,
+              opacity: opacity,
+              transform: `scale(${scale})`,
+              zIndex: 9999 - index // Newer particles on top
+            }}
+          />
+        )
+      })}
 
       {/* Left side - Text content */}
       <div className="hero-content">

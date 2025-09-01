@@ -1022,6 +1022,7 @@ body::before {
 
 .subtitle-icon {
   font-size: 2rem;
+  color: #FF4500;
   filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.5));
 }
 
@@ -3137,4 +3138,150 @@ body::before {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+/* About Section Icon Colors */
+.card-icon {
+  color: #FF4500;
+}
+
+.point-icon {
+  color: #60A5FA;
+}
+/* Override About Section Icon Colors */
+.subtitle-icon {
+  color: #FF4500 !important;
+}
+
+.card-icon {
+  color: #FF4500 !important;
+}
+
+.point-icon {
+  color: #FF4500 !important;
+}
+/* Portfolio Section Icon Colors */
+.project-category {
+  color: #FF4500 !important;
+}
+
+.project-category svg {
+  color: #FF4500 !important;
+}
+/* Industries Section - React Icons Styling */
+.industry-react-icon {
+  font-size: 2.5rem !important;
+  color: #FF4500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.industry-item:hover .industry-react-icon {
+  transform: scale(1.1) !important;
+  color: #FF6B35 !important;
+}
+
+/* Industries Stats Section */
+.industry-stats {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 69, 0, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FF4500;
+}
+
+.stat-icon {
+  font-size: 1rem !important;
+  color: #FF4500 !important;
+}
+
+/* Enhanced Feature Tags */
+.industry-features .feature-tag {
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(96, 165, 250, 0.1)) !important;
+  border: 1px solid rgba(255, 69, 0, 0.3) !important;
+  color: #FF4500 !important;
+  font-weight: 600 !important;
+}
+
+.industry-features .feature-tag:hover {
+  background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(96, 165, 250, 0.2)) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Responsive Stats */
+@media (max-width: 768px) {
+  .industry-stats {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+/* Industries Section - React Icons Red-Orange Styling */
+.industry-react-icon {
+  font-size: 2.5rem !important;
+  color: #FF4500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.industry-item:hover .industry-react-icon {
+  transform: scale(1.1) !important;
+  color: #FF6B35 !important;
+}
+/* Enhanced Comet Particle Effects */
+.comet-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(255, 165, 0, 0.9) 25%, 
+    rgba(255, 69, 0, 0.8) 50%, 
+    rgba(255, 20, 147, 0.6) 75%, 
+    transparent 100%);
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 165, 0, 0.6),
+    0 0 30px rgba(255, 69, 0, 0.4),
+    0 0 40px rgba(255, 20, 147, 0.3);
+  animation: cometPulse 0.5s ease-out;
+}
+
+@keyframes cometPulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Custom cursor for hero section */
+.hero-section {
+  cursor: none !important;
+}
+
+.hero-section * {
+  cursor: none !important;
 }
